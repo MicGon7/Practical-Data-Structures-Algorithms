@@ -40,5 +40,25 @@ public class SinglyLinkedList {
         System.out.println();
     }
 
+    public Node getSecondFromLast() {
+        Node temp = first;
+
+        if (temp.next != null) {
+            Node newNode = first.next;
+
+            // increment newNode while keeping track of previous node until end of the list is reached.
+            while (newNode.next != null) {
+                temp = newNode;
+                newNode = newNode.next;
+            }
+
+        } else {
+            System.out.println("There is only one node in list");
+            return null;
+        }
+
+        return temp;
+    }
+
 
 }

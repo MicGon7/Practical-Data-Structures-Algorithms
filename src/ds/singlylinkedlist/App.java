@@ -10,13 +10,19 @@ public class App {
         myList.insertFirst(99);
         myList.insertFirst(88);
 
-        System.out.println("Original List");
+//        System.out.println("Original List");
+//        myList.displayList();
+//        Node deletedNoded = myList.deleteFirst();
+//
+//        System.out.println("Deleted first node: " + deletedNoded.data);
+//        myList.displayList();
+//
         myList.displayList();
-        Node deletedNoded = myList.deleteFirst();
 
-        System.out.println("Deleted first node: " + deletedNoded.data);
+        System.out.println("added second to last node into last");
+        myList.insertFirst(myList.getSecondFromLast().data);
+
+
         myList.displayList();
-
-        System.out.println(myList);
     }
 }
